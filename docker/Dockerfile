@@ -1,4 +1,5 @@
-FROM ubuntu:18.04
+### FROM ubuntu:18.04
+FROM node
 
 ### Orignal maintainer="pughdr <david.pugh@kaust.edu.sa>"
 LABEL maintainer="mattaw6 <mattaw6@my.wgu.edu>"
@@ -68,9 +69,9 @@ RUN conda update --name base --channel defaults conda && \
     conda clean --all --yes
 
 # run the postBuild script to install the JupyterLab extensions
-RUN conda activate $ENV_PREFIX && \
-    /usr/local/bin/postBuild.sh && \
-    conda deactivate
+# RUN conda activate $ENV_PREFIX && \
+#    /usr/local/bin/postBuild.sh && \
+#    conda deactivate
 
 # use an entrypoint script to insure conda environment is properly activated at runtime
 ENTRYPOINT [ "/usr/local/bin/entrypoint.sh" ]

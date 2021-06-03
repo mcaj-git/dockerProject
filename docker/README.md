@@ -4,11 +4,11 @@ If you wish to add (remove) dependencies in your project's `environment.yml` (or
 
 ```bash
 $ docker image build \
-  --build-arg username=$USER \
-  --build-arg uid=$UID \
-  --build-arg gid=$GID \
+  --build-arg username=insecurit \
+  --build-arg uid=1000 \
+  --build-arg gid=100 \
   --file Dockerfile \
-  --tag $IMAGE_NAME:$IMAGE_TAG \
+  --tag dockerproject:latest \
   ../
 ```
 

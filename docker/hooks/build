@@ -3,8 +3,8 @@ set -ex
 
 docker image build \
     --build-arg username=insecurit \
-    --build-arg uid=1000 \
-    --build-arg gid=100 \
+    --build-arg uid=1001 \
+    --build-arg gid=101 \
     --tag "docker-project-template:latest" \
     --file Dockerfile \
     ../

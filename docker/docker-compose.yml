@@ -4,9 +4,9 @@ services:
   jupyterlab-server:
     build:
       args:
-        - username=$insecurit
-        - uid=$1000
-        - gid=$100
+        - username=insecurit
+        - uid=1000
+        - gid=100
       context: ../
       dockerfile: docker/Dockerfile
     ports:
